@@ -1,0 +1,5 @@
+#Spring Cloud Hystrix Dashboard 与 Turbine
+参考：https://blog.csdn.net/zhuyu19911016520/article/details/85561096
+
+Hystrix Dashboard 单机监控页面
+Turbine 聚合流，多个微服务聚合监控

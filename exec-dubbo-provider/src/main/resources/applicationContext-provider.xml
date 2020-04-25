@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://code.alibabatech.com/schema/dubbo  http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="demotest-provider" owner="programmer">
+        <dubbo:parameter key="qos.enable" value="true"/>
+        <dubbo:parameter key="qos.accept.foreign.ip" value="false"/>
+        <dubbo:parameter key="qos.port" value="55555"/>
+    </dubbo:application>
+
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
+
+    <dubbo:registry protocol="zookeeper" address="192.168.43.175:12181,192.168.43.175:12182,192.168.43.175:12183"></dubbo:registry>
+
+    <dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
+
+    <dubbo:service interface="com.darben.DemoService" ref="providerService" protocol="dubbo"></dubbo:service>
+    <bean id="providerService" class="com.darben.DemoServiceImpl"></bean>
+</beans>

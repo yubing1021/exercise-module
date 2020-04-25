@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.darben</groupId>
+    <artifactId>exercise-module</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>exercise-module</name>
+    <description>Exercise-module project for Spring Boot</description>
+    <developers>
+        <developer>
+            <name>darben</name>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>exec-data-reids</module>
+        <module>exec-data-reactive-redis</module>
+        <module>exec-kafka</module>
+        <module>exec-nio</module>
+        <module>exec-netty</module>
+        <module>exec-zookeeper</module>
+        <module>exec-lambda</module>
+        <module>exec-data-structure</module>
+        <module>exec-elasticsearch</module>
+        <module>exec-spring</module>
+
+        <!--
+        小项目demo
+        目标：
+        1、实现gateway网关路由功能（鉴权、路由、限流等）
+        2、实现Hystrix高可用的功能（隔离策略、熔断:快速失败快速恢复、降级、监控）
+        -->
+        <module>exec-sub-eureka</module>
+        <module>exec-sub-configserver</module>
+        <module>exec-model</module>
+        <module>exec-sub-gateway</module>
+        <module>exec-sub-appweb</module>
+        <module>exec-sub-orderserver</module>
+
+        <module>exec-dubbo-api</module>
+        <module>exec-dubbo-provider</module>
+        <module>exec-dubbo-consumer</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+    </dependencies>
+
+    <!--<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>-->
+
+</project>

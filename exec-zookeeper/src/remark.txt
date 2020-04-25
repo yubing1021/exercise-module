@@ -1,0 +1,47 @@
+【参考】
+https://www.cnblogs.com/rocky-fang/p/9030438.html
+https://blog.csdn.net/qq_34021712/article/details/82872186
+
+一、zookeeper原生实现
+demo目录
+创建客户端连接Session ok
+同步创建节点node（临时节点、临时有序节点、永久节点，永久有序节点） ok
+异步创建节点node（临时节点、临时有序节点、永久节点，永久有序节点） ok
+同步修改节点node数据 ok
+异步修改节点node数据 ok
+同步查询子节点集合 ok
+异步查询子节点集合 ok
+同步查询节点数据 ok
+异步查询节点数据 ok
+ACL方式处理 ok
+通过ACL查询节点和数据 ok
+同步删除节点node ok
+异步删除节点node ok
+判断节点时候存在 ok
+
+总结：
+观察者模式存在以下几种情况：
+NodeCreated  节点创建
+NodeDeleted  节点删除
+NodeDataChanged 节点的数据内容发生变化
+NodeChildrenChanged  节点的子节点发生变化
+DataWatchRemoved
+ChildWatchRemoved
+
+二、zookeeper开源客户端
+1、ZkClient
+github上一个开源的zookeeper客户端。ZkClient在Zookeeper原生API接口之上进行了包装，是一个更加易用的Zookeeper客户端
+特点：
+连接超时问题
+watcher反复注册功能
+
+2、Curator
+Curator是Netflix公司开源的一套Zookeeper客户端框架，解决了很多Zookeeper底层的一些工作，包括连接重复，反复注册Watcher等，实现了
+Fluent风格的API接口。目前已成为Apache顶级项目，是全世界范围使用最广泛的Zookeeper客户端之一
+
+三、代码说明
+com.zk包下面的代码是Zookeeper原生API实现
+
+com.zkclient包下面的代码是ZkClient开源客户端实现
+
+com.curator包下面的代码是curator开源客户端实现

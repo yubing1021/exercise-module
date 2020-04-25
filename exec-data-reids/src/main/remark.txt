@@ -1,0 +1,9 @@
+【参考】
+jedis方式
+https://www.jianshu.com/p/b9154316227e
+
+lettuce方式
+https://baijiahao.baidu.com/s?id=1653885983671118645&wfr=spider&for=pc
+
+SpringBoot实现redis读写分离
+https://blog.csdn.net/xue15029240296/article/details/96857052

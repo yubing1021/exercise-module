@@ -1,0 +1,5 @@
+IdeaJ创建父项目和子项目
+https://blog.csdn.net/li1325169021/article/details/89367174
+
+设置编码为utf-8编码
+https://blog.csdn.net/m0_38132361/article/details/80628203

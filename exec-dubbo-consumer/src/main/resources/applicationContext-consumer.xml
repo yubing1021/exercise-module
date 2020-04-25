@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="demotest-consumer" owner="programmer" organization="dubbox"></dubbo:application>
+
+    <dubbo:registry protocol="zookeeper" address="192.168.43.175:12181,192.168.43.175:12182,192.168.43.175:12183"></dubbo:registry>
+
+    <dubbo:reference id="permissionService" interface="com.darben.DemoService" ></dubbo:reference>
+
+</beans>
