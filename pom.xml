@@ -51,6 +51,8 @@
         <module>exec-dubbo-api</module>
         <module>exec-dubbo-provider</module>
         <module>exec-dubbo-consumer</module>
+        <module>exec-nacos-provider</module>
+        <module>exec-nacos-consumer</module>
     </modules>
 
     <properties>

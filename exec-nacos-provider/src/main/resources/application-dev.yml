@@ -1,0 +1,4 @@
+spring:
+  profiles: dev
+mysql:
+  uri: localhost:3306
