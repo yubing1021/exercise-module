@@ -8,7 +8,7 @@ spring:
   application:
     name: nacos-provider
   profiles:
-    active: dev
+    active: sit
   cloud:
     nacos:
       discovery:
