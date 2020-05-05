@@ -74,6 +74,7 @@
             <type>pom</type>
         </dependency>
 
+        <!-- 本地模块依赖 -->
         <dependency>
             <groupId>com.darben</groupId>
             <artifactId>exec-dubbo-api</artifactId>

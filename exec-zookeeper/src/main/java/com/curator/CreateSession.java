@@ -14,7 +14,7 @@ import org.apache.curator.retry.RetryUntilElapsed;
  */
 public class CreateSession {
 
-    public static String address="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
+    public static final String ADDRESS="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -37,7 +37,7 @@ public class CreateSession {
                 newClient(address,5000,5000,retryPolicy);*/
 
         CuratorFramework client = CuratorFrameworkFactory.builder()
-                .connectString(address)
+                .connectString(ADDRESS)
                 .sessionTimeoutMs(5000)
                 .connectionTimeoutMs(5000)
                 .retryPolicy(retryPolicy)

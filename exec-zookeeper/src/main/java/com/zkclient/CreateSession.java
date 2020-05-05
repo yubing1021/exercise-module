@@ -10,11 +10,11 @@ import org.I0Itec.zkclient.serialize.SerializableSerializer;
  */
 public class CreateSession {
 
-    public static String address="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
+    public static final String ADDRESS="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
 
     public static void main(String[] args) {
 
-        ZkClient client = new ZkClient(address,5000,5000, new SerializableSerializer());
+        new ZkClient(ADDRESS,5000,5000, new SerializableSerializer());
 
         System.out.println("connected ok");
 

@@ -27,7 +27,7 @@ public class MsgProducerTask {
     public void send(){
         String message = UUID.randomUUID().toString();
 
-        ListenableFuture listenableFuture = kafkaTemplate.send("test",message);
+        kafkaTemplate.send("test",message);
 
         log.info("消息发送成功 msg= {}",message);
         log.info("");

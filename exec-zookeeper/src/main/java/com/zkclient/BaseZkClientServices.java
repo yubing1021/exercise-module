@@ -12,14 +12,14 @@ import org.I0Itec.zkclient.serialize.ZkSerializer;
  */
 public class BaseZkClientServices {
 
-    public static String address="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
+    public static final String ADDRESS="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
 
     public ZkClient client;
 
     private UserInfo userInfo;
 
     public BaseZkClientServices(){
-        client=new ZkClient(address,5000,5000, new SerializableSerializer());
+        client=new ZkClient(ADDRESS,5000,5000, new SerializableSerializer());
         System.out.println("connecter ok!");
     }
 

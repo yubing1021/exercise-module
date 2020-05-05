@@ -14,7 +14,7 @@ public class SimpleQueueServiceImpl implements IQueueService<Object> {
     private List list = new LinkedList();
 
     //长度，容量
-    private final int MAX_SIZE = 10;
+    private static final int MAX_SIZE = 10;
 
     @Override
     public boolean offer(Object o) throws InterruptedException {

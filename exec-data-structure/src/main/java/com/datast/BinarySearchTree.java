@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  */
 public class BinarySearchTree {
 
-    private class Node {
+    private static class Node {
         //数据内容
         int data;
         //左节点

@@ -7,10 +7,14 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="demotest-consumer" owner="programmer" organization="dubbox"></dubbo:application>
-
+    <!-- 配置别名，目的是在后台可以看到这个服务的别名，方便进行区分 -->
+    <dubbo:application name="consumer" owner="programmer" organization="dubbox"></dubbo:application>
+    <!-- 配置中心
+        protocol 协议
+        address 注册中心地址
+     -->
     <dubbo:registry protocol="zookeeper" address="192.168.43.175:12181,192.168.43.175:12182,192.168.43.175:12183"></dubbo:registry>
 
-    <dubbo:reference id="permissionService" interface="com.darben.DemoService" ></dubbo:reference>
+    <dubbo:reference id="permissionService" interface="com.darben.service.ProductService" ></dubbo:reference>
 
 </beans>

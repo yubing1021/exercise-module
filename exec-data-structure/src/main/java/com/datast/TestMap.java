@@ -13,7 +13,7 @@ public class TestMap {
 
     public static void main(String[] args) {
 
-        Hashtable table = new Hashtable();
+        //Hashtable table = new Hashtable();
         /*table.contains(1);
         table.containsKey(2);
         table.containsValue(3);
@@ -37,7 +37,7 @@ public class TestMap {
         HashSet set = new HashSet();
         set.add(1);
 
-        BlockingQueue queue = new LinkedBlockingDeque();
+        //BlockingQueue queue = new LinkedBlockingDeque();
 
 
         Vector<Integer> vectors = new Vector<>();

@@ -22,7 +22,7 @@ public class SubscribeDataChanges extends BaseZkClientServices {
     }
 
     public SubscribeDataChanges(){
-        this.client = new ZkClient(address,5000,5000, new BytesPushThroughSerializer());
+        this.client = new ZkClient(ADDRESS,5000,5000, new BytesPushThroughSerializer());
     }
 
     static class ZkNodeDateChanges implements IZkDataListener {

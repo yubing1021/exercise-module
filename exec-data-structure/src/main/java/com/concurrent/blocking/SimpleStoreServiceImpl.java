@@ -10,7 +10,7 @@ import java.util.LinkedList;
 public class SimpleStoreServiceImpl implements StoreService {
 
     //仓库最大容量
-    private final int MAX_SIZE=100;
+    private static final int MAX_SIZE=100;
     //仓库存储的载体，数据
     private LinkedList list = new LinkedList();
 

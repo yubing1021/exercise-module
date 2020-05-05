@@ -12,7 +12,7 @@ import org.apache.curator.retry.RetryUntilElapsed;
  */
 public class BaseCuratorServices {
 
-    public static String address="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
+    public static final String ADDRESS="192.168.8.196:12181,192.168.8.196:12182,192.168.8.196:12183";
 
     public CuratorFramework client;
 
@@ -37,7 +37,7 @@ public class BaseCuratorServices {
                 newClient(address,5000,5000,retryPolicy);*/
 
         client = CuratorFrameworkFactory.builder()
-                .connectString(address)
+                .connectString(ADDRESS)
                 .sessionTimeoutMs(5000)
                 .connectionTimeoutMs(5000)
                 .retryPolicy(retryPolicy)

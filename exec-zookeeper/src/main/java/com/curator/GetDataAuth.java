@@ -16,7 +16,7 @@ public class GetDataAuth extends BaseCuratorServices {
         RetryPolicy retryPolicy = new RetryUntilElapsed(50000,1000);
 
         this.client = CuratorFrameworkFactory.builder()
-                .connectString(address)
+                .connectString(ADDRESS)
                 //添加认证方式
                 .authorization("digest", "yubing:123456".getBytes())
                 .sessionTimeoutMs(5000)

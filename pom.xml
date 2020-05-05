@@ -27,6 +27,7 @@
         <module>exec-data-reids</module>
         <module>exec-data-reactive-redis</module>
         <module>exec-kafka</module>
+        <module>exec-rabbitmq</module>
         <module>exec-nio</module>
         <module>exec-netty</module>
         <module>exec-zookeeper</module>
@@ -48,9 +49,6 @@
         <module>exec-sub-appweb</module>
         <module>exec-sub-orderserver</module>
 
-        <module>exec-dubbo-api</module>
-        <module>exec-dubbo-provider</module>
-        <module>exec-dubbo-consumer</module>
         <module>exec-nacos-provider</module>
         <module>exec-nacos-consumer</module>
     </modules>
