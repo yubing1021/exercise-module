@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.darben</groupId>
-        <artifactId>exercise-module</artifactId>
+        <artWifactId>exercise-module</artWifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <groupId>com.darben</groupId>

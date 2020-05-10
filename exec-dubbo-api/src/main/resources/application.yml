@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: exec-dubbo-api
+server:
+  port: 8092
+dubbo:
+  scan:
+    base-packages: com.darben
+  application:
+    name: exec-dubbo-api
+    id: exec-dubbo-api
+  registry:
+    id: exec-dubbo-api-registry
+    address: zookeeper://192.168.43.175:12181?backup=192.168.43.175:12182,192.168.43.175:12183
