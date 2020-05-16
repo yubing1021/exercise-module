@@ -1,13 +1,18 @@
 package com.darben;
 
+import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@Slf4j
+@EnableDubbo
 @SpringBootApplication
 public class ExecDubboProviderApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ExecDubboProviderApplication.class, args);
+        log.info("SpringBootApplication run success!");
     }
 
 }

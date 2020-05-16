@@ -3,7 +3,6 @@ package com.darben.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.darben.client.ProductService;
 import com.darben.dto.Product;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/product")
 public class ProductController {
 
-    @Reference(version = "1.0.0")
+    @Reference
     private ProductService productService;
 
-    @GetMapping("/get")
+    @RequestMapping("/get")
     public Product getProduct(String id){
         Product product = productService.getProduct(id);
         return product;

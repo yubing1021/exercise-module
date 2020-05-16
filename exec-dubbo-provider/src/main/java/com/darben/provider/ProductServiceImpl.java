@@ -9,7 +9,7 @@ import com.darben.dto.Product;
  * @author: darben
  * @create: 2020-05-10 21:39
  */
-@Service(version = "1.0.0", application = "${dubbo.application.id}", protocol = "${dubbo.protocol.id}", registry = "${dubbo.registry.id}")
+@Service
 public class ProductServiceImpl implements ProductService {
 
     @Override

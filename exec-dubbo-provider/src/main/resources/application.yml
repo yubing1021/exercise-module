@@ -2,19 +2,12 @@ spring:
   application:
     name: exec-dubbo-provider
 server:
-  port: 8091
+  port: 9091
 dubbo:
-  scan:
-    base-packages: com.darben
   application:
     name: exec-dubbo-provider
-    qos-enable: false
-    id: exec-dubbo-provider
   protocol:
-    id: dubbo
     name: dubbo
-    port: 10901
-    status: server #标明是一个server服务
+    port: 20880
   registry:
-    id: exec-dubbo-provider-registry
-    address: zookeeper://192.168.43.175:12181?backup=192.168.43.175:12182,192.168.43.175:12183
+    address: zookeeper://192.168.43.175:12181
