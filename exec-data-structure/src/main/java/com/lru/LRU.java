@@ -179,6 +179,7 @@ public class LRU<K,V> {
         lru.put(4,"4");
         lru.remove(1);
         lru.remove(3);
+        lru.get(2);
 
         System.out.println(lru.toString());
     }

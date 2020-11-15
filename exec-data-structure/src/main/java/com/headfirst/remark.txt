@@ -1,0 +1,10 @@
+装饰者模式：com.headfirst.decorator
+
+简单工厂模式：com.headfirst.simplefactory
+
+观察者模式：com.headfirst.observer
+
+里氏替换原则：com.headfirst.lsp
+（1）针对子父类继承而言
+（2）Liskov Substitution Principle, LSP
+（3）只要是父类能出现的地方子类就可以出现，而且替换为子类也不会产生任何错误或者异常，反过来未必能适应
