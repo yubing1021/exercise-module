@@ -30,25 +30,6 @@ import java.util.List;
 @ImportResource({"classpath*:config/spring-appweb-mvc.xml"})
 public class ExecSubAppwebApplication {
 
-    @Bean
-    public HttpMessageConverters fastJsonHttpMessageConverters(){
-        //1.需要定义一个convert转换消息的对象;
-        FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();
-        //2:添加fastJson的配置信息;
-        FastJsonConfig fastJsonConfig = new FastJsonConfig();
-        fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat,
-                SerializerFeature.WriteMapNullValue,
-                SerializerFeature.WriteDateUseDateFormat);
-        //3处理中文乱码问题
-        List<MediaType> fastMediaTypes = new ArrayList<>();
-        fastMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
-        //4.在convert中添加配置信息.
-        fastJsonHttpMessageConverter.setSupportedMediaTypes(fastMediaTypes);
-        fastJsonHttpMessageConverter.setFastJsonConfig(fastJsonConfig);
-        HttpMessageConverter<?> converter = fastJsonHttpMessageConverter;
-        return new HttpMessageConverters(converter);
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(ExecSubAppwebApplication.class, args);
     }
